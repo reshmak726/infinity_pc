@@ -1,0 +1,23 @@
+{% extends 'layout.html' %} {% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/login.css') }}"> {% endblock css %} {% block content %}
+<section class="d-flex flex-column justify-content-center">
+    <div class="container d-flex flex-column align-items-center">
+        <div class="py-3">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+        </div>
+        <div class="py-3">
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+        </div>
+        <div class="py-3">
+            <button class="btn btn-outline-dark" type="submit">Login</button>
+        </div>
+        <div>
+            Don't have an account? <a href="{{url_for('register')}}">Sign Up</a>
+        </div>
+    </div>
+    </div>
+</section>
+
+{% endblock content %}

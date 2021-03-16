@@ -1,0 +1,18 @@
+body {
+  background: url(../images/blue-abstract-waves-4k-3d-art-abstract-art-blue-wavy-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+}
+
+.container {
+  background: white;
+  height: 250px;
+  width: 600px;
+  border-radius: 5px;
+}
+
+#login-page {
+  height: 100vh;
+  border: 1px solid white;
+}
