@@ -1,0 +1,68 @@
+{% extends 'layout.html' %} {% block css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename = 'CSS/log.css') }}"
+/>
+{% endblock css %} {% block content %}
+
+<section id="login-page">
+  <div class="login-page">
+    <div>
+      <img src="../static/images/icon.png" alt="" />
+    </div>
+    <div>
+      <h2>Reality PC</h2>
+    </div>
+    <div class="form-login">
+      <form>
+        {{ form.hidden_tag() }}
+        <div class="email-form">
+          <div class="email-content">
+            <div class="email-lbl">{{ form.email.label}}</div>
+            {% if form.email.errors %}
+            <div class="email-input">{{ form.email }}</div>
+            <div class="invalid-feedback">
+              {% for error in form.email.errors %}
+              <span>{{ error }}</span> {% endfor %}
+            </div>
+            {% else %}
+            <div class="email-input">{{ form.email }}</div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="pass-form">
+          <div class="pass-content">
+            <div class="pass-lbl">{{ form.password.label }}</div>
+            {% if form.password.errors %}
+            <div class="pass-input">{{ form.password }}</div>
+            <div class="invalid-feedback">
+              {% for error in form.password.errors %}
+              <span>{{ error }}</span> {% endfor %}
+            </div>
+            {% else %}
+            <div class="pass-input">{{ form.password }}</div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="form-check">
+          <div class="tickmark">{{ form.remember(class="remember") }}</div>
+          <div class="check-label">{{ form.remember.label(class="small")}}</div>
+        </div>
+        <div class="btn-div">{{ form.submit(class="btn btn-login") }}</div>
+        <div class="d-flex justify-content-between">
+          <div>
+            <small class="text-muted have-an-acc">
+              Need An Account?
+              <a class="ml-2" href="{{ url_for('register') }}">Sign Up Now</a>
+            </small>
+          </div>
+          <div class="">
+            <a class="forgot" href="#">Forgot Password?</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

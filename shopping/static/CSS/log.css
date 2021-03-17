@@ -1,0 +1,83 @@
+body {
+  background: url(../images/blue-abstract-waves-4k-3d-art-abstract-art-blue-wavy-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+input {
+  /* margin: 5px; */
+  width: 300px;
+}
+label {
+  /* margin: 5px; */
+  width: 100px;
+}
+#login-page {
+  display: flex;
+  flex-direction: column;
+}
+.login-page {
+  justify-content: center;
+  align-items: center;
+}
+.email-form,
+.pass-form {
+  margin: none;
+  padding: none;
+  display: flex;
+  justify-content: center;
+}
+.email-content,
+.pass-content {
+  display: flex;
+  flex-direction: row;
+}
+.email-form input,
+.pass-form input {
+  color: white;
+  border-radius: 0px 5px 5px 0px;
+}
+.email-lbl,
+.pass-lbl {
+  align-items: center;
+}
+
+.email-form label,
+.pass-form label {
+  color: white;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px 0px 0px 5px;
+  background: #125667;
+  height: 100%;
+}
+.form-check input {
+  width: auto;
+}
+.form-check label {
+  width: auto;
+}
+.btn-div {
+  display: flex;
+  justify-content: center;
+}
+.btn-login {
+  width: 100px;
+  height: 35px;
+  background: #125667;
+  color: white;
+}
+.form-login {
+  width: 500px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #032a3a;
+}
+.form-check {
+  display: flex;
+  align-items: baseline;
+}
