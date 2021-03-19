@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Eagle+Lake&display=swap");
+
+.navbar {
+  background: #368aad;
+  width: 100%;
+}
+.nav-link {
+  color: black;
+  font-weight: bold;
+}
+.nav-item {
+  margin: 0px 40px;
+}
+.fa {
+  color: #368aad;
+}
+.shop-logo img {
+  height: 90px;
+}
+.shop-name h1 {
+  color: #368aad;
+  font-family: "Eagle Lake", cursive;
+  font-weight: bolder;
+  text-emphasis: white;
+  text-shadow: 1px 1px 1px white, -1px -1px 1px white;
+}
+.shop-name small {
+  color: white;
+  font-family: "Aguafina Script", cursive;
+  font-size: 15px;
+  letter-spacing: 1px;
+}

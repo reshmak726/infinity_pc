@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Eagle+Lake&display=swap");
+
 body {
-  background: url(../images/blue-abstract-waves-4k-3d-art-abstract-art-blue-wavy-background.jpg);
+  background: url(../images/bg-blur.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: fixed;
@@ -9,20 +11,36 @@ body {
   color: white;
 }
 input {
-  /* margin: 5px; */
   width: 300px;
 }
 label {
-  /* margin: 5px; */
   width: 100px;
 }
 #login-page {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 .login-page {
   justify-content: center;
   align-items: center;
+  width: fit-content;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shop-name h1 {
+  color: #368aad;
+  font-family: "Eagle Lake", cursive;
+  text-shadow: 1px 1px 1px white, -1px -1px 1px white;
+}
+.shop-name img {
+  width: 100px;
 }
 .email-form,
 .pass-form {
@@ -38,7 +56,7 @@ label {
 }
 .email-form input,
 .pass-form input {
-  color: white;
+  color: black;
   border-radius: 0px 5px 5px 0px;
 }
 .email-lbl,
@@ -71,11 +89,24 @@ label {
   background: #125667;
   color: white;
 }
-.form-login {
+.btn:hover {
+  box-shadow: 2px 2px 2px #04cdff;
+  transform: translateZ(2px);
+  transition: 0.5s all;
+  color: black;
+  font-weight: 600;
+  background-color: #00ffff;
+}
+.form-login form {
   width: 500px;
+  height: 300px;
   padding: 10px;
   border-radius: 5px;
   background: #032a3a;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .form-check {
   display: flex;

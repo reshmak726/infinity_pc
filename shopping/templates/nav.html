@@ -1,28 +1,57 @@
-{% extends 'layout.html' %} {% block nav %}
+{% extends 'layout.html' %}{% block css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename = 'CSS/nav.css') }}"
+/>
+{% endblock css %} {% block nav %}
+<header>
+    <div class="d-flex justify-content-between">
+        <div class="left d-flex">
+            <div class="shop-logo">
+                <img src="../static/images/icon.png" alt="" />
+            </div>
+            <div class="shop-name mt-3">
+                <h1>Reality PC</h1>
+                <small class="font-logo mt-0 mx-2">Make it Real</small>
+            </div>
+        </div>
+        <div class="right d-flex">
+            <div class="profile-logo m-3">
+                <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="cart-logo m-3">
+            <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
 <nav class="navbar navbar-expand-sm">
-    <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Dashboard</span></a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#">Motherboard</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">CPU'S</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#">GPU's</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Storage</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#">Power Supply</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Cooling</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#">Cases</span></a>
             </li>
             <li class="nav-item">

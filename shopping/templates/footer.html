@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}{% block css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename = 'CSS/footer.css') }}"
+/>
+{% endblock css %} {% block footer %}
+<section id="foot-section">
+  <div id="foot">
+    <div id="foot-left"></div>
+    <div id="foot-right">
+      <form action="POST">
+        <div class="name-content">
+          <div class="name-lbl">{{ contact.name.label}}</div>
+          <div class="name-input">{{ contact.name }}</div>
+        </div>
+        <div class="email-content">
+          <div class="email-lbl">{{ contact.email.label}}</div>
+          <div class="email-input">{{ contact.email }}</div>
+        </div>
+        <div class="phone-content">
+          <div class="phone-lbl">{{ contact.phone.label}}</div>
+          <div class="phone-input">{{ contact.phone }}</div>
+        </div>
+        <div class="message-content">
+          <div class="message-lbl">{{ contact.message.label}}</div>
+          <div class="message-input">{{ contact.message }}</div>
+        </div>
+        <div class="btn-div">{{ contact.submit(class="btn btn-login") }}</div>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock footer %}

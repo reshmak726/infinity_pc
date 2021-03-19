@@ -1,0 +1,149 @@
+body {
+  background: url(../images/bg-blur.png);
+  /* background-color: ; */
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: fixed;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  vertical-align: middle;
+  width: 100%;
+  height: 75vh;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px gray, -2px 0px 5px gray;
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+  width: 96%;
+  height: 90%;
+  position: relative;
+  margin: 1% 2% 0 2%;
+  /* border: 1px solid black; */
+}
+
+/* Caption text */
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+
+.slide {
+  display: flex;
+
+  /*-webkit-animation-name: move 0.9s backwards;
+  -webkit-animation-duration: 1.5s;
+  transition: 0.5s all;
+  animation-name: 0.5s backwards;
+  animation-duration: 1.5s; */
+}
+
+@-webkit-keyframes slide {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+
+/* miniSlides */
+
+#mini-slide {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2%;
+}
+/* .mini-slide-container {
+} */
+
+.miniSlides1,
+.miniSlides2,
+.miniSlides3 {
+  display: none;
+  border-radius: 10px;
+  height: 250px;
+  width: 100%;
+}
+
+.b-btn,
+.f-btn {
+  background: transparent;
+  color: white;
+  position: absolute;
+  z-index: 3;
+  /* border: 1px solid white; */
+  cursor: pointer;
+  padding: 8px;
+}
+.mini-slide-container {
+  position: relative;
+}
+.b-btn {
+  left: 0%;
+  top: 50%;
+}
+.f-btn {
+  right: 0%;
+  top: 50%;
+}
+.card-bg {
+  width: 95%;
+  padding: 30px;
+  background: #368aad;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 5px;
+}
+.card {
+  border: none;
+  background: black;
+  height: fit-content;
+  border-radius: 5px;
+}

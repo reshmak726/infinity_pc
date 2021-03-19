@@ -7,16 +7,18 @@
 
 <section id="login-page">
   <div class="login-page">
-    <div>
-      <img src="../static/images/icon.png" alt="" />
-    </div>
-    <div>
-      <h2>Reality PC</h2>
+    <div class="top">
+      <div class="shop-name">
+        <img src="../static/images/icon.png" alt="" />
+      </div>
+      <div class="shop-name">
+        <h1>Reality PC</h1>
+      </div>
     </div>
     <div class="form-login">
-      <form>
+      <form action="" method="POST">
         {{ form.hidden_tag() }}
-        <div class="email-form">
+        <div class="email-form mt-3">
           <div class="email-content">
             <div class="email-lbl">{{ form.email.label}}</div>
             {% if form.email.errors %}
@@ -44,8 +46,8 @@
             {% endif %}
           </div>
         </div>
-        <div class="form-check">
-          <div class="tickmark">{{ form.remember(class="remember") }}</div>
+        <div class="form-check mx-lg-2">
+          <div class="tickmark mx-2">{{ form.remember(class="remember") }}</div>
           <div class="check-label">{{ form.remember.label(class="small")}}</div>
         </div>
         <div class="btn-div">{{ form.submit(class="btn btn-login") }}</div>

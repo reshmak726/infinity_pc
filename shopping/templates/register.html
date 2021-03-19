@@ -4,83 +4,70 @@
   href="{{ url_for('static', filename = 'CSS/register.css') }}"
 />
 {% endblock css %} {% block content %}
+<section id="register-page">
+  <div class="top">
+    <div class="shop-name mb-2">
+      <img src="../static/images/icon.png" alt="" />
+    </div>
+    <div class="shop-name mb-3">
+      <h1>Reality PC</h1>
+    </div>
+  </div>
+  <form action="" method="POST">
+    <div class="register-page">
+      {{ form.hidden_tag() }}
 
-<div class="container">
-  <form action="" method="post">
-    {{ form.hidden_tag() }}
-    <ul class="list-group">
-      <li
-        class="list-group-item d-flex justify-content-between align-items-center"
-      >
+      <div class="d-flex justify-content-between align-items-center">
         {{ form.username.label}} {% if form.username.errors %} {{
-        form.username(class="form-control form-control-lg is-invalid") }}
+        form.username(class="") }}
         <div class="invalid-feedback">
           {% for error in form.username.errors %}
           <span>{{ error }}</span> {% endfor %}
         </div>
-        {% else %} {{ form.username(class="form-control form-control-lg") }} {%
-        endif %}
-      </li>
-      <li
-        class="list-group-item d-flex justify-content-between align-items-center"
-      >
-        {{ form.email.label(class="form-control-label") }} {% if
-        form.email.errors %} {{ form.email(class="form-control form-control-lg
-        is-invalid") }}
+        {% else %} {{ form.username(class="") }} {% endif %}
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        {{ form.email.label(class="") }} {% if form.email.errors %} {{
+        form.email(class=" is-invalid") }}
         <div class="invalid-feedback">
           {% for error in form.email.errors %}
           <span>{{ error }}</span> {% endfor %}
         </div>
-        {% else %} {{ form.email(class="form-control form-control-lg") }} {%
-        endif %}
-      </li>
+        {% else %} {{ form.email(class="") }} {% endif %}
+      </div>
 
-      <li
-        class="list-group-item d-flex justify-content-between align-items-center"
-      >
-        {{ form.phone.label(class="form-control-label") }} {% if
-        form.phone.errors %} {{ form.phone(class="form-control form-control-lg
-        is-invalid") }}
+      <div class="d-flex justify-content-between align-items-center">
+        {{ form.phone.label(class="") }} {% if form.phone.errors %} {{
+        form.phone(class=" is-invalid") }}
         <div class="invalid-feedback">
           {% for error in form.phone.errors %}
           <span>{{ error }}</span> {% endfor %}
         </div>
-        {% else %} {{ form.phone(class="form-control form-control-lg") }} {%
-        endif %}
-      </li>
-      <li
-        class="list-group-item d-flex justify-content-between align-items-center"
-      >
-        {{ form.password.label(class="form-control-label") }} {% if
-        form.password.errors %} {{ form.password(class="form-control
-        form-control-lg is-invalid") }}
+        {% else %} {{ form.phone(class="") }} {% endif %}
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        {{ form.password.label(class="") }} {% if form.password.errors %} {{
+        form.password(class="form-control form-control-lg is-invalid") }}
         <div class="invalid-feedback">
           {% for error in form.password.errors %}
           <span>{{ error }}</span> {% endfor %}
         </div>
-        {% else %} {{ form.password(class="form-control form-control-lg") }} {%
-        endif %}
-      </li>
-      <li
-        class="list-group-item d-flex justify-content-between align-items-center"
-      >
-        {{ form.confirm_password.label(class="form-control-label") }} {% if
-        form.confirm_password.errors %} {{
-        form.confirm_password(class="form-control form-control-lg is-invalid")
-        }}
+        {% else %} {{ form.password(class="") }} {% endif %}
+      </div>
+      <div class="d-flex">
+        {{ form.confirm_password.label(class="") }} {% if
+        form.confirm_password.errors %} {{ form.confirm_password(class="
+        is-invalid") }}
         <div class="invalid-feedback">
           {% for error in form.confirm_password.errors %}
           <span>{{ error }}</span> {% endfor %}
         </div>
-        {% else %} {{ form.confirm_password(class="form-control
-        form-control-lg") }} {% endif %}
-      </li>
-      <li
-        class="list-group-item d-flex justify-content-between align-items-center"
-      >
-        {{ form.submit(class="btn btn-outline-info") }}
-      </li>
-    </ul>
+        {% else %} {{ form.confirm_password(class="") }} {% endif %}
+      </div>
+      <div class="d-flex justify-content-center mt-3">
+        {{ form.submit(class="btn") }}
+      </div>
+    </div>
   </form>
-</div>
+</section>
 {% endblock content%}
