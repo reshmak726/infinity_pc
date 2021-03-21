@@ -4,93 +4,96 @@
   href="{{ url_for('static', filename = 'CSS/home.css') }}"
 />
 {% endblock css %} {% include 'nav.html' %}{% block content %}
-<section class="my-4">
-  <!-- slideshow overlay -->
+<section>
+  <section class="my-4">
+    <!-- slideshow overlay -->
 
-  <div class="slideshow-container">
-    <div class="mySlides slide">
-      <img src="../static/images/main/main 0.png" />
-      <div class="text">Caption Text</div>
-    </div>
+    <div class="slideshow-container">
+      <div class="mySlides slide">
+        <img src="../static/images/main/main 0.png" />
+        <div class="text">Caption Text</div>
+      </div>
 
-    <div class="mySlides slide">
-      <img src="../static/images/main/main 1.png" />
-      <div class="text">Caption Two</div>
-    </div>
+      <div class="mySlides slide">
+        <img src="../static/images/main/main 1.png" />
+        <div class="text">Caption Two</div>
+      </div>
 
-    <div class="mySlides slide">
-      <img src="../static/images/main/main 2.png" />
-      <div class="text">Caption Three</div>
+      <div class="mySlides slide">
+        <img src="../static/images/main/main 2.png" />
+        <div class="text">Caption Three</div>
+      </div>
+      <div class="mySlides slide">
+        <img src="../static/images/main/main 3.png" />
+        <div class="text">Caption Three</div>
+      </div>
     </div>
-    <div class="mySlides slide">
-      <img src="../static/images/main/main 3.png" />
-      <div class="text">Caption Three</div>
+    <!-- dots below overlay -->
+    <div style="text-align: center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
-  </div>
-  <!-- dots below overlay -->
-  <div style="text-align: center">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-</section>
-<section id="mini-slide">
-  <div class="mini-slide-container mx-2">
-    <img class="miniSlides1" src="../static/images/accessories/acc1.png" />
-    <img class="miniSlides1" src="../static/images/accessories/acc2.png" />
-    <img class="miniSlides1" src="../static/images/accessories/acc3.png" />
-    <img class="miniSlides1" src="../static/images/accessories/acc4.png" />
-    <img class="miniSlides1" src="../static/images/accessories/acc5.png" />
-    <div class="b-btn" onclick="plusDivs1(-1)">&#10094;</div>
-    <div class="f-btn" onclick="plusDivs1(1)">&#10095;</div>
-  </div>
-  <div class="mini-slide-container mx-2">
-    <img class="miniSlides2" src="../static/images/accessories/cpu1.png" />
-    <img class="miniSlides2" src="../static/images/accessories/acc2.png" />
-    <img class="miniSlides2" src="../static/images/accessories/acc3.png" />
-    <img class="miniSlides2" src="../static/images/accessories/acc4.png" />
-    <img class="miniSlides2" src="../static/images/accessories/acc5.png" />
-    <div class="b-btn" onclick="plusDivs2(-1)">&#10094;</div>
-    <div class="f-btn" onclick="plusDivs2(1)">&#10095;</div>
-  </div>
-  <div class="mini-slide-container mx-2">
-    <img class="miniSlides3" src="../static/images/accessories/gpu1.png" />
-    <img class="miniSlides3" src="../static/images/accessories/acc2.png" />
-    <img class="miniSlides3" src="../static/images/accessories/acc3.png" />
-    <img class="miniSlides3" src="../static/images/accessories/acc4.png" />
-    <img class="miniSlides3" src="../static/images/accessories/acc5.png" />
-    <div class="b-btn" onclick="plusDivs3(-1)">&#10094;</div>
-    <div class="f-btn" onclick="plusDivs3(1)">&#10095;</div>
-  </div>
-</section>
-<section class="home-cards d-flex justify-content-center mt-5">
-  <div class="card-bg d-flex flex-row">
-    <div class="card mx-2">
-      <img class="" src="../static/images/PC/pc1.png" alt="" />
+  </section>
+  <section id="mini-slide">
+    <div class="mini-slide-container mx-2">
+      <img class="miniSlides1" src="../static/images/accessories/acc1.png" />
+      <img class="miniSlides1" src="../static/images/accessories/acc2.png" />
+      <img class="miniSlides1" src="../static/images/accessories/acc3.png" />
+      <img class="miniSlides1" src="../static/images/accessories/acc4.png" />
+      <img class="miniSlides1" src="../static/images/accessories/acc5.png" />
+      <div class="b-btn" onclick="plusDivs1(-1)">&#10094;</div>
+      <div class="f-btn" onclick="plusDivs1(1)">&#10095;</div>
     </div>
-    <div class="card mx-2">
-      <img src="../static/images/PC/pc2.png" alt="" />
+    <div class="mini-slide-container mx-2">
+      <img class="miniSlides2" src="../static/images/accessories/cpu1.png" />
+      <img class="miniSlides2" src="../static/images/accessories/acc2.png" />
+      <img class="miniSlides2" src="../static/images/accessories/acc3.png" />
+      <img class="miniSlides2" src="../static/images/accessories/acc4.png" />
+      <img class="miniSlides2" src="../static/images/accessories/acc5.png" />
+      <div class="b-btn" onclick="plusDivs2(-1)">&#10094;</div>
+      <div class="f-btn" onclick="plusDivs2(1)">&#10095;</div>
     </div>
-    <div class="card mx-2">
-      <img src="../static/images/PC/pc3.png" alt="" />
+    <div class="mini-slide-container mx-2">
+      <img class="miniSlides3" src="../static/images/accessories/gpu1.png" />
+      <img class="miniSlides3" src="../static/images/accessories/acc2.png" />
+      <img class="miniSlides3" src="../static/images/accessories/acc3.png" />
+      <img class="miniSlides3" src="../static/images/accessories/acc4.png" />
+      <img class="miniSlides3" src="../static/images/accessories/acc5.png" />
+      <div class="b-btn" onclick="plusDivs3(-1)">&#10094;</div>
+      <div class="f-btn" onclick="plusDivs3(1)">&#10095;</div>
     </div>
-  </div>
-</section>
+  </section>
+  <section class="home-cards d-flex justify-content-center mt-5">
+    <div class="card-bg d-flex flex-row">
+      <div class="card mx-2">
+        <img class="" src="../static/images/PC/pc1.png" alt="" />
+      </div>
+      <div class="card mx-2">
+        <img src="../static/images/PC/pc2.png" alt="" />
+      </div>
+      <div class="card mx-2">
+        <img src="../static/images/PC/pc3.png" alt="" />
+      </div>
+    </div>
+  </section>
 
-<section class="home-cards d-flex justify-content-center mt-5">
-  <div class="card-bg d-grid">
-    <div class="card mx-2">
-      <img class="" src="../static/images/accessories/acc6.png" alt="" />
+  <section class="home-cards d-flex justify-content-center mt-5">
+    <div class="card-bg d-grid">
+      <div class="card mx-2">
+        <img class="" src="../static/images/accessories/acc6.png" alt="" />
+      </div>
+      <div class="card mx-2">
+        <img src="../static/images/accessories/head1.png" alt="" />
+      </div>
+      <div class="card mx-2">
+        <img src="../static/images/accessories/speaker1.png" alt="" />
+      </div>
     </div>
-    <div class="card mx-2">
-      <img src="../static/images/accessories/head1.png" alt="" />
-    </div>
-    <div class="card mx-2">
-      <img src="../static/images/accessories/speaker1.png" alt="" />
-    </div>
-  </div>
+  </section>
+  {% include 'footer.html' %}
 </section>
-{% endblock content %} {% include 'footer.html' %} {% block js %}
+{% endblock content %} {% block js %}
 <script src="../static/JS/home.js"></script>
 {% endblock js %}

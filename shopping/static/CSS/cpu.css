@@ -59,7 +59,6 @@ body {
 
 .slide {
   display: flex;
-
   /*-webkit-animation-name: move 0.9s backwards;
   -webkit-animation-duration: 1.5s;
   transition: 0.5s all;
@@ -93,56 +92,24 @@ body {
   }
 }
 
-/* miniSlides */
-
-#mini-slide {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 2%;
-}
-/* .mini-slide-container {
-} */
-
-.miniSlides1,
-.miniSlides2,
-.miniSlides3 {
-  display: none;
-  border-radius: 10px;
-  height: 250px;
-  width: 100%;
-}
-
-.b-btn,
-.f-btn {
-  background: transparent;
-  color: white;
-  position: absolute;
-  z-index: 3;
-  cursor: pointer;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-.mini-slide-container {
-  position: relative;
-}
-.b-btn {
-  left: 0%;
-  top: 45%;
-}
-.f-btn {
-  right: 0%;
-  top: 45%;
-}
 .card-bg {
   width: 95%;
   padding: 30px;
-  background: #368aad;
+  background: transparent;
   grid-template-columns: 1fr 1fr 1fr;
-  border-radius: 5px;
 }
+
 .home-cards .card {
   border: none;
-  background: black;
+  background: linear-gradient(180deg, #07617c 0%, #032a3a 43.75%);
   height: fit-content;
-  border-radius: 5px;
+  border: 1px solid white;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-cards .card img {
+  width: 200px;
+  height: 200px;
 }

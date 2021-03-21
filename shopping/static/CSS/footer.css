@@ -1,14 +1,92 @@
 #foot-section {
-  /* position: absolute; */
-  /* bottom: 0; */
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 #foot {
+  width: 95%;
+  background: #368aad;
   display: flex;
-  justify-content: space-around;
-}
-.foot-right {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  border-radius: 8px;
+}
+
+.foot-link .fa,
+.foot-link a {
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: black;
+  text-decoration: none;
+}
+.foot-link :hover .fa {
+  color: #00ffff;
+}
+.foot-link :hover {
+  color: #00ffff;
+}
+/* .fa {
+  color: black;
+} */
+#foot-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+textarea {
+  resize: none;
+}
+.name-content,
+.email-content,
+.phone-content,
+.message-content {
+  margin: 8px;
+}
+.name-content label,
+.email-content label,
+.phone-content label,
+.message-content label {
+  width: 100px;
+  background: white;
+  height: 80%;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.name-content input,
+.email-content input,
+.phone-content input {
+  width: 300px;
+  height: 80%;
+  background: #368aad;
+  border-radius: 0px 5px 5px 0px;
+}
+.name-content input:focus,
+.email-content input:focus,
+.phone-content input:focus {
+  outline: none;
+  transform: translateZ(2px);
+  transition: 0.5s all;
+}
+.message-content textarea {
+  width: 300px;
+  height: 80%;
+  background: #368aad;
+  border-radius: 0px 5px 5px 0px;
+}
+.message-content textarea:focus {
+  outline: none;
+}
+.btn-submit {
+  background: #125667;
+  color: white;
+}
+.btn-submit:hover {
+  box-shadow: 2px 2px 2px #04cdff;
+  transform: translateZ(2px);
+  transition: 0.5s all;
+  color: black;
+  font-weight: 600;
+  background-color: #00ffff;
 }

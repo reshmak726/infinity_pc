@@ -1,0 +1,77 @@
+body {
+  background: url(../images/bg-blur.png);
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shop-name h1 {
+  color: #368aad;
+  font-family: "Eagle Lake", cursive;
+  text-shadow: 1px 1px 1px white, -1px -1px 1px white;
+}
+.shop-name img {
+  width: 100px;
+}
+
+div input {
+  width: 300px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+div input:focus {
+  outline: none;
+  box-shadow: 2px 2px 2px #04cdff;
+}
+div label {
+  width: 150px;
+  height: 100px;
+  color: white;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px 0px 0px 5px;
+  background: #125667;
+  height: 100%;
+}
+.btn {
+  width: 100px;
+  height: 35px;
+  background: #125667;
+  color: white;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 2px #04cdff;
+  transform: translateZ(2px);
+  transition: 0.5s all;
+  color: black;
+  font-weight: 600;
+  background-color: #00ffff;
+}
+
+.register-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 1px solid olive; */
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgb(71, 71, 71), -2px 0px 5px rgb(61, 60, 60);
+  height: 350px;
+  background: #032a3a;
+  padding: 25px;
+}

@@ -6,26 +6,55 @@
 {% endblock css %} {% block footer %}
 <section id="foot-section">
   <div id="foot">
-    <div id="foot-left"></div>
-    <div id="foot-right">
-      <form action="POST">
-        <div class="name-content">
+    <div id="foot-left" class="m-5">
+      <div class="foot-link">
+        <a href="#"
+          ><i class="fa fa-whatsapp m-2">&nbsp;&nbsp;</i>https://whatsapp.com</a
+        >
+      </div>
+      <div class="foot-link">
+        <a href="#"
+          ><i class="fa fa-facebook m-2">&nbsp;&nbsp;&nbsp;</i
+          >https://facebook.com</a
+        >
+      </div>
+      <div class="foot-link">
+        <a href="#"
+          ><i class="fa fa-instagram m-2">&nbsp;&nbsp;</i
+          >https://instagram.com</a
+        >
+      </div>
+      <div class="foot-link">
+        <a href="#"
+          ><i class="fa fa-twitter m-2">&nbsp;&nbsp;</i>https://twitter.com</a
+        >
+      </div>
+    </div>
+    <div
+      id="foot-right"
+      style="background: rgba(255, 255, 255, 0.51)"
+      class="px-4"
+    >
+      <form action="" method="POST">
+        <div class="name-content d-flex">
           <div class="name-lbl">{{ contact.name.label}}</div>
           <div class="name-input">{{ contact.name }}</div>
         </div>
-        <div class="email-content">
+        <div class="email-content d-flex">
           <div class="email-lbl">{{ contact.email.label}}</div>
           <div class="email-input">{{ contact.email }}</div>
         </div>
-        <div class="phone-content">
+        <div class="phone-content d-flex">
           <div class="phone-lbl">{{ contact.phone.label}}</div>
           <div class="phone-input">{{ contact.phone }}</div>
         </div>
-        <div class="message-content">
+        <div class="message-content d-flex">
           <div class="message-lbl">{{ contact.message.label}}</div>
           <div class="message-input">{{ contact.message }}</div>
         </div>
-        <div class="btn-div">{{ contact.submit(class="btn btn-login") }}</div>
+        <div class="btn-div text-lg-center">
+          {{ contact.submit(class="btn btn-submit") }}
+        </div>
       </form>
     </div>
   </div>
