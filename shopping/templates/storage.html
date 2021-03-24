@@ -1,0 +1,121 @@
+{% extends 'layout.html' %} {% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/storage.css') }}" /> {% endblock css %} {% include 'nav.html' %}{% block content %}
+<section>
+    <section class="my-4">
+        <!-- slideshow overlay -->
+
+        <div class="slideshow-container">
+            <div class="mySlides slide">
+                <img src="../static/images/gpu/banner.png" />
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides slide">
+                <img src="../static/images/main/main 1.png" />
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides slide">
+                <img src="../static/images/main/main 2.png" />
+                <div class="text">Caption Three</div>
+            </div>
+            <div class="mySlides slide">
+                <img src="../static/images/main/main 3.png" />
+                <div class="text">Caption Three</div>
+            </div>
+        </div>
+        <!-- dots below overlay -->
+        <div style="text-align: center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+    <section class="home-cards mt-5">
+
+        <!-- ***************Overlay************* -->
+        <div id="overlay">
+            <div id="overlay-flex" onclick="off()">
+                <div class="overlay-content">
+                    <div class="overlay-head">Western Digital (WD)</div>
+                    <div class="overlay-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi voluptatibus dolor, rerum quos perferendis voluptatum, repudiandae provident officiis debitis, veniam aliquid sit porro praesentium harum! Adipisci omnis accusantium aliquid
+                        totam?
+                    </div>
+                    <div class="overlay-cart-amt">
+                        <div class="overlay-amt">$ 150</div>
+                        <div class="overlay-cart">Add to Cart</div>
+                    </div>
+                </div>
+                <div class="overlay-img"><img src="../static/images/storage/ssd/wd/wd_smain.png" alt=""></div>
+            </div>
+        </div>
+        <!-- ***************Overlay************* -->
+
+        <div class="card-title my-4">SSD</div>
+        <div class="card-bg d-grid">
+            <div class="card" onclick="on()">
+                <img class=" " src="../static/images/storage/ssd/wd/wd_smain.png " alt=" " /> Western Digital (WD)
+            </div>
+            <div class="card ">
+                <img src="../static/images/storage/ssd/samsung/samsung_smain.png " alt=" " /> Samsung
+            </div>
+            <div class="card ">
+                <img src="../static/images/storage/ssd/adata/adata_smain.png " alt=" " /> ADATA
+            </div>
+            <div class="card ">
+                <img src="../static/images/storage/ssd/corsair/corsair_smain.png " alt=" " /> Corsair
+            </div>
+            <div class="card ">
+                <img src="../static/images/storage/ssd/kingston/kingston_smain.png " alt=" " /> kingston
+            </div>
+            <div class="card ">
+                <img src="../static/images/storage/ssd/seagate/seagate_smain.png " alt=" " /> Seagate
+            </div>
+        </div>
+    </section>
+
+    <section class="home-cards center mt-5 ">
+        <div class="card-title my-4 ">HDD</div>
+        <div class="card-bg d-grid ">
+            <div class="card ">
+                <img class=" " src="../static/images/storage/hdd/seagate/seagate_hmain.png " alt=" " /> Seagate
+            </div>
+            <div class="card ">
+                <img src="../static/images/storage/hdd/samsung/samsung_hmain.png " alt=" " /> Samsung
+            </div>
+            <div class="card ">
+                <img src="../static/images/storage/hdd/corsair/corsair_hmain.png " alt=" " /> Corsair
+            </div>
+            <div class="card ">
+                <img src="../static/images/storage/hdd/wd/wd_hmain.png " alt=" " /> Western Digital (WD)
+            </div>
+            <div class="card ">
+                <img src="../static/images/storage/hdd/toshiba/toshiba_hmain.png " alt=" " /> Toshiba
+            </div>
+        </div>
+    </section>
+
+    <section class="home-cards mt-5 ">
+        <div class="card-title my-4 ">PORTABLE SSD</div>
+        <div class="card-bg d-grid ">
+            <div class="card ">
+                <img class=" " src="../static/images/storage/portable ssd/samsung/samsung_pmain.png " alt=" " /> Samsung
+            </div>
+            <div class="card ">
+                <img src="../static/images/storage/portable ssd/wd/wd_pmain.png " alt=" " /> Western Digital (WD)
+            </div>
+            <div class="card ">
+                <img src="../static/images/storage/portable ssd/seagate/seagate_pmain.png " alt=" " /> Seagate
+            </div>
+            <div class="card ">
+                <img src="../static/images/storage/portable ssd/adata/adata_pmain.png " alt=" " /> ADATA
+            </div>
+        </div>
+    </section>
+    {% include 'footer.html' %}
+</section>
+{% endblock content %} {% block js %}
+<script src="../static/JS/home.js "></script>
+<script src="../static/JS/storage.js "></script>
+{% endblock js %}

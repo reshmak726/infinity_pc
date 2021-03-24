@@ -64,6 +64,11 @@
         </div>
         {% else %} {{ form.confirm_password(class="") }} {% endif %}
       </div>
+      <div class="d-flex img-update">
+        {{ form.picture.label() }} {{ form.picture(class="form-control-file") }} {% if form.picture.errors %} {% for error in form.picture.errors %}
+        <span class="text-danger">{{ error }}</span></br>
+        {% endfor %} {% endif %}
+      </div>
       <div class="d-flex justify-content-center mt-3">
         {{ form.submit(class="btn") }}
       </div>

@@ -1,9 +1,5 @@
 {% extends 'layout.html' %}{% block css %}
-<link
-  rel="stylesheet"
-  href="{{ url_for('static', filename = 'CSS/nav.css') }}"
-/>
-{% endblock css %} {% block nav %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/nav.css') }}" /> {% endblock css %} {% block nav %}
 <header>
     <div class="d-flex justify-content-between">
         <div class="left d-flex">
@@ -16,11 +12,20 @@
             </div>
         </div>
         <div class="right d-flex">
-            <div class="profile-logo m-3">
-                <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+
+            <div class="profile">
+                <button class="profile-btn">Dropdown</button>
+                <div class="profile-content">
+                    {% if current_user.is_authenticated %}
+                    <a href="{{url_for('profile')}}"><i class="fa fa-user" aria-hidden="true">Profile</i></a>
+                    <a href="{{url_for('logout')}}"><i class="fa fa-sign-out" aria-hidden="true">Logout</i></a> {% else %}
+                    <a href="{{url_for('login')}}"><i class="fa fa-user" aria-hidden="true">Login</i></a>
+                    <a href="{{url_for('register')}}"><i class="fa fa-user" aria-hidden="true">Register</i></a> {% endif %}
+                </div>
             </div>
+
             <div class="cart-logo m-3">
-            <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
             </div>
         </div>
     </div>
@@ -40,10 +45,10 @@
                 <a class="nav-link" href="{{url_for('cpu')}}">CPU'S</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">GPU's</span></a>
+                <a class="nav-link" href="{{url_for('gpu')}}">GPU's</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Storage</a>
+                <a class="nav-link" href="{{url_for('storage')}}">Storage</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Power Supply</span></a>
