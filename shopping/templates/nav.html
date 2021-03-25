@@ -14,18 +14,18 @@
         <div class="right d-flex">
 
             <div class="profile">
-                <button class="profile-btn">Dropdown</button>
+                <button class="profile-btn"><i class="fa fa-user fa-3x" aria-hidden="true"></i></button>
                 <div class="profile-content">
                     {% if current_user.is_authenticated %}
-                    <a href="{{url_for('profile')}}"><i class="fa fa-user" aria-hidden="true">Profile</i></a>
-                    <a href="{{url_for('logout')}}"><i class="fa fa-sign-out" aria-hidden="true">Logout</i></a> {% else %}
-                    <a href="{{url_for('login')}}"><i class="fa fa-user" aria-hidden="true">Login</i></a>
-                    <a href="{{url_for('register')}}"><i class="fa fa-user" aria-hidden="true">Register</i></a> {% endif %}
+                    <a href="{{url_for('profile')}}"><i class="fa fa-user drop" aria-hidden="true"></i>&nbsp; Profile</a>
+                    <a href="{{url_for('logout')}}"><i class="fa fa-sign-out drop" aria-hidden="true"></i>&nbsp;Logout</a> {% else %}
+                    <a href="{{url_for('login')}}"><i class="fa fa-user drop" aria-hidden="true"></i>&nbsp;Login</a>
+                    <a href="{{url_for('register')}}"><i class="fa fa-user drop" aria-hidden="true"></i>&nbsp;Register</a> {% endif %}
                 </div>
             </div>
 
             <div class="cart-logo m-3">
-                <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+                <a href="{{url_for('cart')}}"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>

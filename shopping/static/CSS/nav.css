@@ -1,82 +1,87 @@
 @import url("https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Eagle+Lake&display=swap");
 .navbar {
-    background: #368aad;
-    width: 100%;
+  background: #368aad;
+  width: 100%;
 }
 
 .nav-link {
-    color: black;
-    font-weight: bold;
+  color: black;
+  font-weight: bold;
 }
 
 .nav-item {
-    margin: 0px 40px;
+  margin: 0px 40px;
 }
 
 .fa {
-    color: #368aad;
+  color: #368aad;
 }
 
 .shop-logo img {
-    height: 90px;
+  height: 90px;
 }
 
 .shop-name h1 {
-    color: #368aad;
-    font-family: "Eagle Lake", cursive;
-    font-weight: bolder;
-    text-emphasis: white;
-    text-shadow: 1px 1px 1px white, -1px -1px 1px white;
+  color: #368aad;
+  font-family: "Eagle Lake", cursive;
+  font-weight: bolder;
+  text-emphasis: white;
+  text-shadow: 1px 1px 1px white, -1px -1px 1px white;
 }
 
 .shop-name small {
-    color: white;
-    font-family: "Aguafina Script", cursive;
-    font-size: 15px;
-    letter-spacing: 1px;
+  color: white;
+  font-family: "Aguafina Script", cursive;
+  font-size: 15px;
+  letter-spacing: 1px;
 }
-
 
 /* **************dropdown***************** */
 
 .profile-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
 
 .profile {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .profile-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  right: -50px;
+  background: #032a3a;
+  min-width: 160px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .profile-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: block;
 }
 
 .profile-content a:hover {
-    background-color: #f1f1f1
+  color: #032a3a;
+  background: #368aad;
 }
 
 .profile:hover .profile-content {
-    display: block;
+  display: block;
 }
-
-.profile:hover .profile-btn {
-    background-color: #3e8e41;
+.drop {
+  color: white;
+}
+.profile-content a:hover .drop {
+  color: #032a3a;
 }

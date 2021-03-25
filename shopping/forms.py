@@ -44,7 +44,8 @@ class UpdateProfileForm(FlaskForm):
                            validators=[DataRequired(), Length(min=7, max=15)])
     picture = FileField('Update Profile Picture', validators=[FileAllowed(['jpg', 'png'])])
     phone= StringField('Phone No',validators=[DataRequired(),Length(min=7,max=15)])
-    submit = SubmitField('Update')
+    password = PasswordField('Password', validators=[DataRequired()])
+    submit = SubmitField('Confirm')
 
     def validate_username(self, username):
         if username.data != current_user.username:
@@ -62,3 +63,9 @@ class UpdateProfileForm(FlaskForm):
             user = User.query.filter_by(phone=phone.data).first()
             if user:
                 raise ValidationError('Aldready have an account with this Phone No')
+    
+    def validate_password(self, password):
+        if password.data != current_user.password:
+            user = User.query.filter_by(password=password.data).first()
+            if user:
+                raise ValidationError('Aldready have an account with this password No')

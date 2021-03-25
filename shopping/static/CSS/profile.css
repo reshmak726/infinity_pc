@@ -90,10 +90,54 @@ div label {
 }
 
 .profile-img {
-  z-index: 3;
+  z-index: 2;
   display: flex;
   align-items: center;
   height: 20px;
   justify-content: center;
   /* border: 1px solid red; */
+}
+
+/* overlay */
+
+#overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+  justify-content: center;
+  align-items: center;
+}
+
+#overlay-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #032a3a;
+  border-radius: 15px;
+  font-weight: bold;
+  font-family: cursive;
+  color: white;
+  width: 40%;
+  height: 40%;
+  z-index: 2;
+}
+
+#popup-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#popup-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
