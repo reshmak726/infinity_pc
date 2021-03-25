@@ -3,5 +3,43 @@
   rel="stylesheet"
   href="{{ url_for('static', filename = 'CSS/cart.css') }}"
 />
-{% endblock css %} {% include 'nav.html' %}{% block content %} {% endblock
-content %}
+{% endblock css %} {% include 'nav.html' %}{% block content %}
+<div class="header mt-3">Your Shopping Cart</div>
+<section id="cart-content">
+  <div id="cart-head">
+    <div id="a0">Product</div>
+    <div id="b0">Qty</div>
+    <div id="c0">Price</div>
+    <div id="d0">Total</div>
+  </div>
+  <hr class="m-hr" />
+  <div class="cart-items" id="row1">
+    <div class="item-pic">
+      <img src="../static/images/gpu/card1-1.png" alt="Nvidia RTX 2080" />
+    </div>
+    <div class="item-name">Nvidia RTX 2080</div>
+    <div class="item-qty">
+      <div class="qty-minus">-</div>
+      <div class="qty-no">2</div>
+      <div class="qty-plus">+</div>
+    </div>
+    <div class="item-price">$10</div>
+    <div class="item-total">$20</div>
+  </div>
+  <hr class="m-hr" />
+  <div class="cart-items" id="row2">
+    <div class="item-pic">
+      <img src="../static/images/motherboard/card1-3.png" alt="Motherboard" />
+    </div>
+    <div class="item-name">Motherboard</div>
+    <div class="item-qty">
+      <div class="qty-minus">-</div>
+      <div class="qty-no">1</div>
+      <div class="qty-plus">+</div>
+    </div>
+    <div class="item-price">$15</div>
+    <div class="item-total">$15</div>
+  </div>
+  <hr class="m-hr" />
+</section>
+{% endblock content %}

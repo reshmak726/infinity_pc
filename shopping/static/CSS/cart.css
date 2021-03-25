@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Geo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
+body {
+  background: linear-gradient(128.64deg, #077292 16.6%, #032a3a 67.61%);
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: fixed;
+  color: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  font-family: "Geo", sans-serif;
+  font-size: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2%;
+}
+
+hr {
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+}
+
+#cart-content {
+  margin: 0 2%;
+  /* background-color: blanchedalmond; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: "Geo", sans-serif;
+}
+
+#cart-head {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  width: 100%;
+  justify-items: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#a0 {
+  display: flex;
+  justify-self: start;
+  margin-left: 10px;
+}
+
+.cart-items {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  height: 120px;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.item-pic > img {
+  margin-left: 5px;
+  height: 100px;
+}
+
+.item-name {
+  font-size: 28px;
+  display: flex;
+  justify-self: start;
+}
+
+.item-qty {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: #eae5e5;
+}
+
+.qty-plus {
+  height: 100%;
+  width: 50px;
+  font-size: 22px;
+  border-radius: 10px;
+  background-color: #c4c4c4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: black;
+}
+
+.qty-no {
+  height: 100%;
+  width: 50px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.qty-minus {
+  height: 100%;
+  width: 50px;
+  font-size: 22px;
+  border-radius: 10px;
+  background-color: #c4c4c4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: black;
+}
+
+.item-price {
+  font-size: 25px;
+}
+
+.item-total {
+  font-size: 25px;
+}
