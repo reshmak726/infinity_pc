@@ -37,23 +37,23 @@
     >
       <form action="" method="POST">
         <div class="name-content d-flex">
-          <div class="name-lbl">{{ contact.name.label}}</div>
-          <div class="name-input">{{ contact.name }}</div>
+          <div class="name-lbl">{{ form.name.label}}</div>
+          <div class="name-input">{{ form.name }}</div>
         </div>
         <div class="email-content d-flex">
-          <div class="email-lbl">{{ contact.email.label}}</div>
-          <div class="email-input">{{ contact.email }}</div>
+          <div class="email-lbl">{{ form.email.label}}</div>
+          <div class="email-input">{{ form.email }}</div>
         </div>
         <div class="phone-content d-flex">
-          <div class="phone-lbl">{{ contact.phone.label}}</div>
-          <div class="phone-input">{{ contact.phone }}</div>
+          <div class="phone-lbl">{{ form.phone.label}}</div>
+          <div class="phone-input">{{ form.phone }}</div>
         </div>
         <div class="message-content d-flex">
-          <div class="message-lbl">{{ contact.message.label}}</div>
-          <div class="message-input">{{ contact.message }}</div>
+          <div class="message-lbl">{{ form.message.label}}</div>
+          <div class="message-input">{{ form.message }}</div>
         </div>
         <div class="btn-div text-lg-center">
-          {{ contact.submit(class="btn btn-submit") }}
+          {{ form.submit(class="btn btn-submit") }}
         </div>
       </form>
     </div>

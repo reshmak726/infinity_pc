@@ -6,7 +6,7 @@ from sqlalchemy.sql.functions import user
 from shopping import app,db,bcrypt
 from flask import render_template, url_for, flash, redirect,request, session
 from shopping.forms import ContactForm, RegistrationForm,LoginForm, UpdateProfileForm
-from shopping.models import User
+from shopping.models import User,Contact
 from flask_login import login_user, current_user, logout_user, login_required
 from sqlalchemy import insert,update,delete
 import re 
@@ -19,17 +19,19 @@ class footer():
       email = request.form['email'] 
       phone = request.form['phone']
       message = request.form['message']
-      msg = 'You have successfully registered !'
+      query=Contact(username=name, email=email,phone=phone, message=message)
+      db.session.add(query)
+      db.session.commit()
+      msg = "We got your query, we'll revert to u back soon.."
     return contact
 
 
 @app.route('/home',methods=['GET', 'POST'])
 def home():
-    contact=ContactForm()
     form= footer.footer()
     if request.method=='POST':
         return redirect(url_for('home'))
-    return render_template('home.html', contact= contact,form=form)
+    return render_template('home.html',form=form)
 
 @app.route('/login',methods=['GET', 'POST'])
 def login():
@@ -106,35 +108,31 @@ def logout():
 
 @app.route('/mother')
 def mother():
-    contact=ContactForm()
     form= footer.footer()
     if request.method=='POST':
         return redirect(url_for('home'))
-    return render_template('mother.html', contact= contact,form=form)
+    return render_template('mother.html',form=form)
 
 @app.route('/cpu')
 def cpu():
-    contact=ContactForm()
     form= footer.footer()
     if request.method=='POST':
         return redirect(url_for('home'))
-    return render_template('cpu.html', contact= contact,form=form)
+    return render_template('cpu.html', form=form)
 
 @app.route('/gpu')
 def gpu():
-    contact=ContactForm()
     form= footer.footer()
     if request.method=='POST':
         return redirect(url_for('home'))
-    return render_template('gpu.html', contact= contact,form=form)
+    return render_template('gpu.html',form=form)
 
 @app.route('/storage')
 def storage():
-    contact=ContactForm()
     form= footer.footer()
     if request.method=='POST':
         return redirect(url_for('home'))
-    return render_template('storage.html', contact= contact,form=form)
+    return render_template('storage.html',form=form)
 
 @app.route('/cart')
 def cart():
