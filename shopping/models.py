@@ -10,7 +10,8 @@ def load_user(user_id):
 
 
 class User(db.Model, UserMixin):
-    id = db.Column(db.Integer(15), primary_key=True)
+    __tablename__ = 'User'
+    id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     phone = db.Column(db.String(120), unique=True, nullable=False)
@@ -34,37 +35,49 @@ class User(db.Model, UserMixin):
         return f"User('{self.username}', '{self.email}', '{self.image_file}', '{self.phone}')"
 
 class Contact(db.Model, UserMixin):
-    id = db.Column(db.Integer(15), primary_key=True)
+    __tablename__ = 'Contact'
+    id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), nullable=False)
     email = db.Column(db.String(120), nullable=False)
     phone = db.Column(db.String(120), nullable=False)
     message = db.Column(db.String(5000), nullable=False)
 
     def __repr__(self):
-        return f"User('{self.username}', '{self.email}','{self.phone}', '{self.message}')"
+        return f"Contact('{self.username}', '{self.email}','{self.phone}', '{self.message}')"
 
 class Category(db.Model, UserMixin):
-    id = db.Column(db.Integer(15), primary_key=True)
+    __tablename__ = 'Category'
+    id = db.Column(db.Integer, primary_key=True)
     category_name=db.Column(db.String(50),nullable=False)
 
+    def __repr__(self):
+        return f"Category('{self.id}', '{self.category_name}')"
+
 class SubCategory(db.Model,UserMixin):
-    id = db.Column(db.Integer(15), primary_key=True)
-    category_id = db.Column(db.Integer(15), db.ForeignKey('category.id') ,nullable=False)
+    __tablename__ = 'SubCategory'
+    id = db.Column(db.Integer, primary_key=True)
+    category_id = db.Column(db.Integer, db.ForeignKey('Category.id') ,nullable=False)
     subcategory_name=db.Column(db.String(50), nullable=False)
 
+    def __repr__(self):
+        return f"SubCategory('{self.id}', '{self.category_id}','{self.subcategory_name}')"
+
 class Product(db.Model, UserMixin):
-    id = db.Column(db.Integer(15),primary_key=True)
-    category_id = db.Column(db.Integer(15), db.ForeignKey('category.id') ,nullable=False)
-    subcategory_id = db.Column(db.Integer, db.ForeignKey('subcategory.id') ,nullable=False)
-    name = db.Column(db.String(120), unique=True, nullable=False)
-    des = db.Column(db.String(120), unique=True, nullable=False)
+    __tablename__ = 'Product'
+    id = db.Column(db.Integer,primary_key=True)
+    category_id = db.Column(db.Integer, db.ForeignKey('Category.id') ,nullable=False)
+    subcategory_id = db.Column(db.Integer, db.ForeignKey('SubCategory.id') ,nullable=False)
+    name = db.Column(db.String(120), nullable=False)
+    des = db.Column(db.String(120), nullable=False)
     img = db.Column(db.String(20), nullable=False, default='default.jpg')
-    price = db.Column(db.Integer(10), unique=True, nullable=False)
+    price = db.Column(db.Integer, nullable=False)
 
+    def __repr__(self):
+        return f"Product('{self.id}', '{self.subcategory_id}','{self.name}', '{self.des}',, '{self.img}', '{self.price}')"
 
-# class cart_items(db.Model, UserMixin):
-#     id = db.Column(db.Integer, primary_key=True)
+class cart_items(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
     
 
-#     def __repr__(self):
-#         return f"User('{self.username}', '{self.email}','{self.phone}', '{self.message}')"
+    def __repr__(self):
+        return f"User('{self.username}', '{self.email}','{self.phone}', '{self.message}')"

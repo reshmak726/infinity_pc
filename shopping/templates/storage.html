@@ -38,23 +38,22 @@
   </section>
   <section class="home-cards mt-5">
     <!-- ***************Overlay************* -->
+
     <div id="overlay">
+      {% for i in ssd %}
       <div id="overlay-flex">
         <div class="overlay-content">
-          <div class="overlay-head">Western Digital (WD)</div>
-          <div class="overlay-description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
-            voluptatibus dolor, rerum quos perferendis voluptatum, repudiandae
-            provident officiis debitis, veniam aliquid sit porro praesentium
-            harum! Adipisci omnis accusantium aliquid totam?
-          </div>
+          <div class="overlay-head">{{ i.name }}</div>
+          <div class="overlay-description">{{ i.des }}</div>
           <div class="overlay-cart-amt">
-            <div class="overlay-amt">$ 150</div>
+            <div class="overlay-amt">${{ i.price }}</div>
             <div class="overlay-cart">Add to Cart</div>
           </div>
         </div>
         <div class="overlay-img">
-          <img src="../static/images/storage/ssd/wd/wd_smain.png" alt="" />
+          <img
+            src="{{ url_for('static', filename='images/storage/' +i.img) }}"
+          />
         </div>
         <i
           class="close-overlay fa fa-times-circle"
@@ -63,128 +62,56 @@
           onclick="off()"
         ></i>
       </div>
+      {% endfor %}
     </div>
+
     <!-- ***************Overlay************* -->
 
     <div class="card-title my-4">SSD</div>
     <div class="card-bg d-grid">
+      {% for i in ssd %}
+
       <div class="card" onclick="on()">
         <img
           class=" "
-          src="../static/images/storage/ssd/wd/wd_smain.png "
+          src="{{ url_for('static', filename='images/storage/' +i.img) }}"
           alt=" "
         />
-        Western Digital (WD)
+        {{i.name}}
       </div>
-      <div class="card">
-        <img
-          src="../static/images/storage/ssd/samsung/samsung_smain.png "
-          alt=" "
-        />
-        Samsung
-      </div>
-      <div class="card">
-        <img
-          src="../static/images/storage/ssd/adata/adata_smain.png "
-          alt=" "
-        />
-        ADATA
-      </div>
-      <div class="card">
-        <img
-          src="../static/images/storage/ssd/corsair/corsair_smain.png "
-          alt=" "
-        />
-        Corsair
-      </div>
-      <div class="card">
-        <img
-          src="../static/images/storage/ssd/kingston/kingston_smain.png "
-          alt=" "
-        />
-        kingston
-      </div>
-      <div class="card">
-        <img
-          src="../static/images/storage/ssd/seagate/seagate_smain.png "
-          alt=" "
-        />
-        Seagate
-      </div>
+      {% endfor %}
     </div>
   </section>
 
   <section class="home-cards center mt-5">
     <div class="card-title my-4">HDD</div>
     <div class="card-bg d-grid">
+      {% for i in hdd %}
       <div class="card">
         <img
           class=" "
-          src="../static/images/storage/hdd/seagate/seagate_hmain.png "
+          src="{{ url_for('static', filename='images/storage/' +i.img) }}"
           alt=" "
         />
-        Seagate
+        {{i.name}}
       </div>
-      <div class="card">
-        <img
-          src="../static/images/storage/hdd/samsung/samsung_hmain.png "
-          alt=" "
-        />
-        Samsung
-      </div>
-      <div class="card">
-        <img
-          src="../static/images/storage/hdd/corsair/corsair_hmain.png "
-          alt=" "
-        />
-        Corsair
-      </div>
-      <div class="card">
-        <img src="../static/images/storage/hdd/wd/wd_hmain.png " alt=" " />
-        Western Digital (WD)
-      </div>
-      <div class="card">
-        <img
-          src="../static/images/storage/hdd/toshiba/toshiba_hmain.png "
-          alt=" "
-        />
-        Toshiba
-      </div>
+      {% endfor %}
     </div>
   </section>
 
   <section class="home-cards mt-5">
     <div class="card-title my-4">PORTABLE SSD</div>
     <div class="card-bg d-grid">
+      {% for i in pdisk %}
       <div class="card">
         <img
           class=" "
-          src="../static/images/storage/portable ssd/samsung/samsung_pmain.png "
+          src="{{ url_for('static', filename='images/storage/' +i.img) }}"
           alt=" "
         />
-        Samsung
+        {{i.name}}
       </div>
-      <div class="card">
-        <img
-          src="../static/images/storage/portable ssd/wd/wd_pmain.png "
-          alt=" "
-        />
-        Western Digital (WD)
-      </div>
-      <div class="card">
-        <img
-          src="../static/images/storage/portable ssd/seagate/seagate_pmain.png "
-          alt=" "
-        />
-        Seagate
-      </div>
-      <div class="card">
-        <img
-          src="../static/images/storage/portable ssd/adata/adata_pmain.png "
-          alt=" "
-        />
-        ADATA
-      </div>
+      {% endfor %}
     </div>
   </section>
   {% include 'footer.html' %}

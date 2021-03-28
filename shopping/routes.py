@@ -6,7 +6,7 @@ from sqlalchemy.sql.functions import user
 from shopping import app,db,bcrypt
 from flask import render_template, url_for, flash, redirect,request, session
 from shopping.forms import ContactForm, RegistrationForm,LoginForm, UpdateProfileForm
-from shopping.models import User,Contact
+from shopping.models import User,Contact,Category, SubCategory,Product
 from flask_login import login_user, current_user, logout_user, login_required
 from sqlalchemy import insert,update,delete
 import re 
@@ -22,7 +22,7 @@ class footer():
       query=Contact(username=name, email=email,phone=phone, message=message)
       db.session.add(query)
       db.session.commit()
-      msg = "We got your query, we'll revert to u back soon.."
+      msg = "We go t your query, we'll revert to u back soon.."
     return contact
 
 
@@ -55,7 +55,7 @@ def register():
     form = RegistrationForm()
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
-        user = User(username=form.username.data, email=form.email.data,phone=form.phone.data,image_file=form.picture, password=hashed_password)
+        user = User(username=form.username.data, email=form.email.data,phone=form.phone.data, password=hashed_password)
         db.session.add(user)
         db.session.commit()
         flash('Your account has been created! You are now able to log in', 'success')
@@ -110,30 +110,63 @@ def logout():
 def mother():
     form= footer.footer()
     if request.method=='POST':
-        return redirect(url_for('home'))
+        return redirect(url_for('mother'))
     return render_template('mother.html',form=form)
 
 @app.route('/cpu')
 def cpu():
     form= footer.footer()
     if request.method=='POST':
-        return redirect(url_for('home'))
+        return redirect(url_for('cpu'))
     return render_template('cpu.html', form=form)
 
 @app.route('/gpu')
 def gpu():
     form= footer.footer()
     if request.method=='POST':
-        return redirect(url_for('home'))
+        return redirect(url_for('gpu'))
     return render_template('gpu.html',form=form)
 
 @app.route('/storage')
 def storage():
     form= footer.footer()
+    ssd=Product.query.filter_by(subcategory_id=7).all()
+    hdd=Product.query.filter_by(subcategory_id=8).all()
+    pdisk=Product.query.filter_by(subcategory_id=9).all()
     if request.method=='POST':
-        return redirect(url_for('home'))
-    return render_template('storage.html',form=form)
+        return redirect(url_for('storage'))        
+    return render_template('storage.html',form=form,ssd=ssd,hdd=hdd,pdisk=pdisk)
+        
 
 @app.route('/cart')
 def cart():
     return render_template('cart.html')
+
+@app.route('/powersupply')
+def powersupply():
+    form= footer.footer()
+    if request.method=='POST':
+        return redirect(url_for('powersupply'))
+    return render_template('power.html',form=form)
+
+@app.route('/cooling')
+def cooling():
+    form= footer.footer()
+    if request.method=='POST':
+        return redirect(url_for('cooling'))
+    return render_template('cooling.html',form=form)
+
+
+@app.route('/peripherals')
+def peripherals():
+    form= footer.footer()
+    if request.method=='POST':
+        return redirect(url_for('peripherals'))
+    return render_template('peripherals.html',form=form)
+
+@app.route('/cases')
+def cases():
+    form = footer.footer()
+    if request.method=='POST':
+        return redirect(url_for('cases'))
+    return render_template('cases.html',form=form)
