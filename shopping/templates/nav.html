@@ -31,7 +31,7 @@
     </div>
 </header>
 
-<nav class="navbar navbar-expand-sm">
+<!-- <nav class="navbar navbar-expand-sm">
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
         <div class="navbar-nav mr-auto">
             <div class="nav-item">
@@ -63,5 +63,51 @@
             </div>
 
         </div>
+</nav> -->
+
+
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+        <span></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="xyz"><i class="fa fa-bars"></i></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="navbar-nav">
+                <div class="nav-item">
+                    <a class="nav-link" href="{{url_for('home')}}">Dashboard</span></a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="{{url_for('mother')}}">Motherboard</span></a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="{{url_for('cpu')}}">CPU'S</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="{{url_for('gpu')}}">GPU's</span></a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="{{url_for('storage')}}">Storage</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="{{url_for('powersupply')}}">Power Supply</span></a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="{{url_for('cooling')}}">Cooling</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="{{url_for('cases')}}">Cases</span></a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="{{url_for('peripherals')}}">Peripherals</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </nav>
+
+
+
+
+
 {% endblock nav %}

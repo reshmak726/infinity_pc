@@ -1,106 +1,119 @@
 @import url("https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Eagle+Lake&display=swap");
 .navbar {
-  background: #368aad;
-  width: 100%;
-  position: static;
+    background: #368aad;
+    width: 100%;
+    position: static;
+}
+
+.xyz .fa-bars {
+    color: black;
+}
+
+@media screen and (max-width: 1150px) {
+    .nav-link {
+        font-size: 12px;
+    }
 }
 
 .nav-link {
-  color: black;
-  font-weight: bold;
+    color: black;
+    font-weight: bold;
 }
 
 .navbar-nav {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  height: 100%;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
 }
 
 .nav-item {
-  width: 100%;
-  height: 100%;
-  text-align: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 .nav-item:hover {
-  background: #032a3a;
-  border-radius: 5px;
+    background: #032a3a;
+    border-radius: 5px;
 }
 
 .nav-item:hover a {
-  color: white;
+    color: white;
 }
 
 .fa {
-  color: #368aad;
+    color: #368aad;
 }
 
 .shop-logo img {
-  height: 90px;
+    height: 90px;
 }
 
 .shop-name h1 {
-  color: #368aad;
-  font-family: "Eagle Lake", cursive;
-  font-weight: bolder;
-  text-emphasis: white;
-  text-shadow: 1px 1px 1px white, -1px -1px 1px white;
+    color: #368aad;
+    font-family: "Eagle Lake", cursive;
+    font-weight: bolder;
+    text-emphasis: white;
+    text-shadow: 1px 1px 1px white, -1px -1px 1px white;
 }
 
 .shop-name small {
-  color: white;
-  font-family: "Aguafina Script", cursive;
-  font-size: 15px;
-  letter-spacing: 1px;
+    color: white;
+    font-family: "Aguafina Script", cursive;
+    font-size: 15px;
+    letter-spacing: 1px;
 }
+
 
 /* **************dropdown***************** */
 
 .profile-btn {
-  background-color: transparent;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 
 .profile {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .profile-content {
-  display: none;
-  position: absolute;
-  right: -50px;
-  background: #032a3a;
-  min-width: 160px;
-  border-radius: 5px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    right: -50px;
+    background: #032a3a;
+    min-width: 160px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .profile-content a {
-  color: white;
-  padding: 12px 16px;
-  border-radius: 5px;
-  text-decoration: none;
-  display: block;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
 }
 
 .profile-content a:hover {
-  color: #032a3a;
-  background: #368aad;
+    color: #032a3a;
+    background: #368aad;
 }
 
 .profile:hover .profile-content {
-  display: block;
+    display: block;
 }
+
 .drop {
-  color: white;
+    color: white;
 }
+
 .profile-content a:hover .drop {
-  color: #032a3a;
+    color: #032a3a;
 }

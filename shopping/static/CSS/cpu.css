@@ -106,8 +106,15 @@ body {
 
 .card-bg {
     width: 96%;
+    display: grid;
     background: transparent;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 880px) {
+    .card-bg {
+        grid-template-rows: 1fr;
+    }
 }
 
 .home-cards .card {

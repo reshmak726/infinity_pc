@@ -33,7 +33,7 @@ class ContactForm(FlaskForm):
     phone= StringField('Phone No',validators=[DataRequired(),Length(min=7,max=15)])
     message = TextAreaField('Message',
                            validators=[DataRequired()])
-    submit = SubmitField('Sign Up')
+    submit = SubmitField('Submit')
 
 class UpdateProfileForm(FlaskForm):
     username = StringField('Username',

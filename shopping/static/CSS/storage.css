@@ -153,7 +153,7 @@ body {
   color: white;
 }
 
-#overlay-flex {
+.overlay-flex {
   display: flex;
   flex-direction: row;
   background: linear-gradient(180deg, #07617c 0%, #032a3a 43.75%);
