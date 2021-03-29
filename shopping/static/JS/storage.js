@@ -7,6 +7,7 @@ function on() {
 close_btn.addEventListener("click", () => {
   off();
 });
+
 function off() {
   overlay.style.display = "none";
 }

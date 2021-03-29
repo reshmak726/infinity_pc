@@ -1,4 +1,4 @@
-
+import js2py
 import os
 import secrets
 from PIL import Image
@@ -135,7 +135,7 @@ def storage():
     pdisk=Product.query.filter_by(subcategory_id=9).all()
     if request.method=='POST':
         return redirect(url_for('storage'))        
-    return render_template('storage.html',form=form,ssd=ssd,hdd=hdd,pdisk=pdisk)
+    return render_template('test.html',form=form,ssd=ssd,hdd=hdd,pdisk=pdisk)
         
 
 @app.route('/cart')
