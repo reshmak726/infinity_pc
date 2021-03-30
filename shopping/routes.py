@@ -1,4 +1,3 @@
-import js2py
 import os
 import secrets
 from PIL import Image

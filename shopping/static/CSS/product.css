@@ -9,6 +9,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  height: 75vh;
+  border: 1px solid white;
 }
 .inner-product {
   width: 80%;
@@ -19,13 +22,24 @@ body {
 }
 .product-left {
   display: flex;
-  align-items: center;
+justify-content: center;
   flex-basis: 50%;
 }
 .product-right {
+  display: flex;
+  flex-direction: column;
+ align-items: center;
   flex-basis: 50%;
 }
 
 .product-img img {
   width: 300px;
+}
+.capacity-btn{
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  border: 1px solid white;
+  color:white;
+  padding: 4px 12px;
+  width: 100px;
 }

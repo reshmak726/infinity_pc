@@ -1,147 +1,95 @@
 {% extends 'layout.html' %} {% block css %}
-<link
-  rel="stylesheet"
-  href="{{ url_for('static', filename = 'CSS/test.css') }}"
-/>
-{% endblock css %} {% include 'nav.html' %}{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/test.css') }}" /> {% endblock css %} {% include 'nav.html' %}{% block content %}
 <section>
-  <section class="my-4">
-    <!-- slideshow overlay -->
+    <section class="my-4">
+        <!-- slideshow overlay -->
 
-    <div class="slideshow-container">
-      <div class="mySlides slide">
-        <img src="../static/images/gpu/banner.png" />
-        <div class="text">Caption Text</div>
-      </div>
+        <div class="slideshow-container">
+            <div class="mySlides slide">
+                <img src="../static/images/gpu/banner.png" />
+                <div class="text">Caption Text</div>
+            </div>
 
-      <div class="mySlides slide">
-        <img src="../static/images/main/main 1.png" />
-        <div class="text">Caption Two</div>
-      </div>
+            <div class="mySlides slide">
+                <img src="../static/images/main/main 1.png" />
+                <div class="text">Caption Two</div>
+            </div>
 
-      <div class="mySlides slide">
-        <img src="../static/images/main/main 2.png" />
-        <div class="text">Caption Three</div>
-      </div>
-      <div class="mySlides slide">
-        <img src="../static/images/main/main 3.png" />
-        <div class="text">Caption Three</div>
-      </div>
-    </div>
-    <!-- dots below overlay -->
-    <div style="text-align: center">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-  </section>
-  <section class="home-cards mt-5">
-    <!-- ***************Overlay************* -->
-    <!-- {% for i in ssd %}
-    <div class="overlay overlay-{{ i.id }}">
-      <div class="overlay-flex">
-        <div class="overlay-content">
-          <div class="overlay-head">{{ i.name }}</div>
-          <div class="overlay-description">{{ i.des }}</div>
-          <div class="overlay-cart-amt">
-            <div class="overlay-amt">${{ i.price }}</div>
-            <div class="overlay-cart">Add to Cart</div>
-          </div>
+            <div class="mySlides slide">
+                <img src="../static/images/main/main 2.png" />
+                <div class="text">Caption Three</div>
+            </div>
+            <div class="mySlides slide">
+                <img src="../static/images/main/main 3.png" />
+                <div class="text">Caption Three</div>
+            </div>
         </div>
-        <div class="overlay-img">
-          <img
-            src="{{ url_for('static', filename='images/storage/' +i.img) }}"
-          />
+        <!-- dots below overlay -->
+        <div style="text-align: center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
-        <i
-          class="close-overlay fa fa-times-circle"
-          style="font-size: 25px"
-          aria-hidden="true"
-          onclick="off()"
-        ></i>
-      </div>
-    </div>
-    {% endfor %} -->
-    <!-- ***************Overlay************* -->
-
-    <div class="card-title my-4">SSD</div>
-    <div class="card-bg d-grid service-box">
-      {% for i in ssd %}
-      <div class="card" onclick="on()">
-        <input type="checkbox" name="open" id="open" />
-        <img
-          class=" "
-          src="{{ url_for('static', filename='images/storage/' +i.img) }}"
-          alt=" "
-        />
-        {{i.name}}
+    </section>
+    <section class="home-cards mt-5">
         <!-- ***************Overlay************* -->
-        <div class="overlay">
-          <div class="overlay-flex">
-            <div class="overlay-content">
-              <div class="overlay-head">{{ i.name }}</div>
-              <div class="overlay-description">{{ i.des }}</div>
-              <div class="overlay-cart-amt">
-                <div class="overlay-amt">${{ i.price }}</div>
-                <div class="overlay-cart">Add to Cart</div>
-              </div>
+         {% for i in ssd %}
+        <div class="overlay overlay-{{i.id}}">
+           
+            <div class="overlay-flex">
+                <div class="overlay-content">
+                    <div class="overlay-head">{{ i.name }}</div>
+                    <div class="overlay-description">{{ i.des }}</div>
+                    <div class="overlay-cart-amt">
+                        <div class="overlay-amt">${{ i.price }}</div>
+                        <div class="overlay-cart">Add to Cart</div>
+                    </div>
+                </div>
+                <div class="overlay-img">
+                    <img src="{{ url_for('static', filename='images/storage/' +i.img) }}" />
+                </div>
+                <i class="close-overlay fa fa-times-circle" style="font-size: 25px" aria-hidden="true" onclick="off()"></i>
             </div>
-            <div class="overlay-img">
-              <img
-                src="{{ url_for('static', filename='images/storage/' +i.img) }}"
-              />
-            </div>
-            <input type="checkbox" name="close" id="close" />
-            <i
-              class="close-overlay fa fa-times-circle"
-              style="font-size: 25px"
-              aria-hidden="true"
-              onclick="off()"
-            ></i>
-          </div>
+           
         </div>
-        <!-- ***************Overlay-end************* -->
-      </div>
-      {% endfor %}
-    </div>
-  </section>
+         {% endfor %}
+        <!-- ***************Overlay************* -->
 
-  <section class="home-cards center mt-5">
-    <div class="card-title my-4">HDD</div>
-    <div class="card-bg d-grid">
-      {% for i in hdd %}
-      <div class="card">
-        <img
-          class=" "
-          src="{{ url_for('static', filename='images/storage/' +i.img) }}"
-          alt=" "
-        />
-        {{i.name}}
-      </div>
-      {% endfor %}
-    </div>
-  </section>
+        <div class="card-title my-4">SSD</div>
+        <div class="card-bg d-grid">
+            {% for i in ssd %}
+            <div class="card" onclick="on()">
+                <img class=" " src="{{ url_for('static', filename='images/storage/' +i.img) }}" alt=" " /> {{i.name}}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
 
-  <section class="home-cards mt-5">
-    <div class="card-title my-4">PORTABLE SSD</div>
-    <div class="card-bg d-grid">
-      {% for i in pdisk %}
+    <section class="home-cards center mt-5">
+        <div class="card-title my-4">HDD</div>
+        <div class="card-bg d-grid">
+            {% for i in hdd %}
+            <div class="card">
+                <img class=" " src="{{ url_for('static', filename='images/storage/' +i.img) }}" alt=" " /> {{i.name}}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
 
-      <div class="card">
-        <img
-          class=" "
-          src="{{ url_for('static', filename='images/storage/' +i.img) }}"
-          alt=" "
-        />
-        {{i.name}}
-      </div>
-      {% endfor %}
-    </div>
-  </section>
-  {% include 'footer.html' %}
+    <section class="home-cards mt-5">
+        <div class="card-title my-4">PORTABLE SSD</div>
+        <div class="card-bg d-grid">
+            {% for i in pdisk %}
+            <div class="card">
+                <img class=" " src="{{ url_for('static', filename='images/storage/' +i.img) }}" alt=" " /> {{i.name}}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% include 'footer.html' %}
 </section>
 {% endblock content %} {% block js %}
 <script src="../static/JS/home.js "></script>
-<script src="../static/JS/test.js"></script>
+<!-- <script src="../static/JS/storage.js "></script> -->
 {% endblock js %}
