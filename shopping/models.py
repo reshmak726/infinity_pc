@@ -75,9 +75,12 @@ class Product(db.Model, UserMixin):
     def __repr__(self):
         return f"Product('{self.id}', '{self.subcategory_id}','{self.name}', '{self.des}',, '{self.img}', '{self.price}')"
 
-class cart_items(db.Model, UserMixin):
-    id = db.Column(db.Integer, primary_key=True)
-    
+class Cart(db.Model,UserMixin):
+    __tablename__='Cart'
+    id = db.Column(db.Integer,primary_key=True)
+    user_id= db.Column(db.Integer, db.ForeignKey('User.id'))
+    # adding the foreign key
+    product_id = db.Column(db.Integer, db.ForeignKey('Product.id'))
 
     def __repr__(self):
-        return f"User('{self.username}', '{self.email}','{self.phone}', '{self.message}')"
+        return f"Product('{self.id}', '{self.user_id}','{self.product_id}')"

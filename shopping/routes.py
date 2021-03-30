@@ -106,50 +106,51 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
-@app.route('/mother')
+@app.route('/mother', methods=['GET', 'POST'])
 def mother():
     form= footer.footer()
     if request.method=='POST':
         return redirect(url_for('mother'))
     return render_template('mother.html',form=form)
 
-@app.route('/cpu')
+@app.route('/cpu', methods=['GET', 'POST'])
 def cpu():
     form= footer.footer()
     if request.method=='POST':
         return redirect(url_for('cpu'))
     return render_template('cpu.html', form=form)
 
-@app.route('/gpu')
+@app.route('/gpu', methods=['GET', 'POST'])
 def gpu():
     form= footer.footer()
     if request.method=='POST':
         return redirect(url_for('gpu'))
     return render_template('gpu.html',form=form)
 
-@app.route('/storage')
+@app.route('/storage', methods=['GET', 'POST'])
 def storage():
     form= footer.footer()
+    storage=SubCategory.query.filter_by(category_id=4).all()
     ssd=Product.query.filter_by(subcategory_id=7).all()
     hdd=Product.query.filter_by(subcategory_id=8).all()
     pdisk=Product.query.filter_by(subcategory_id=9).all()
     if request.method=='POST':
         return redirect(url_for('storage'))        
-    return render_template('test.html',form=form,ssd=ssd,hdd=hdd,pdisk=pdisk)
+    return render_template('storage.html',form=form,ssd=ssd,hdd=hdd,pdisk=pdisk,storage=storage)
         
 
-@app.route('/cart')
+@app.route('/cart', methods=['GET', 'POST'])
 def cart():
     return render_template('cart.html')
 
-@app.route('/powersupply')
+@app.route('/powersupply', methods=['GET', 'POST'])
 def powersupply():
     form= footer.footer()
     if request.method=='POST':
         return redirect(url_for('powersupply'))
     return render_template('power.html',form=form)
 
-@app.route('/cooling')
+@app.route('/cooling', methods=['GET', 'POST'])
 def cooling():
     form= footer.footer()
     if request.method=='POST':
@@ -157,16 +158,24 @@ def cooling():
     return render_template('cooling.html',form=form)
 
 
-@app.route('/peripherals')
+@app.route('/peripherals', methods=['GET', 'POST'])
 def peripherals():
     form= footer.footer()
     if request.method=='POST':
         return redirect(url_for('peripherals'))
     return render_template('peripherals.html',form=form)
 
-@app.route('/cases')
+@app.route('/cases', methods=['GET', 'POST'])
 def cases():
     form = footer.footer()
     if request.method=='POST':
         return redirect(url_for('cases'))
     return render_template('cases.html',form=form)
+
+@app.route('/product/<id>', methods=['GET', 'POST'])
+def product(id):
+    product=Product.query.filter_by(id=id).first()
+    form = footer.footer()
+    if request.method=='POST':
+        return redirect(url_for('cases'))
+    return render_template('product.html',form=form,product=product)

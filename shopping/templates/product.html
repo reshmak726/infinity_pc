@@ -1,0 +1,29 @@
+{% extends 'layout.html' %} {% block css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename = 'CSS/product.css') }}"
+/>
+{% endblock css %} {% include 'nav.html' %}{% block content %}
+<section id="product">
+  <div class="inner-product">
+    <div class="product-left">
+      <div class="product-img">
+        <img
+          src="{{ url_for('static', filename='images/storage/' +product.img) }}"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="product-right">
+      <p>{{product.name}}</p>
+      <p>{{product.price}}</p>
+      <p>{{product.des}}</p>
+      <button class="button cart-btn">
+        <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart
+      </button>
+    </div>
+  </div>
+</section>
+{% endblock content %}{% block js %}
+<!-- <script src="../static/JS/home.js "></script> -->
+{% endblock js %}

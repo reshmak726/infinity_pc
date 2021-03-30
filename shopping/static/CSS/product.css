@@ -1,0 +1,31 @@
+body {
+  background: url(../images/bg-blur.png);
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: fixed;
+  color: white;
+}
+#product {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.inner-product {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #07617c 0%, #032a3a 43.75%);
+  border-radius: 5px;
+}
+.product-left {
+  display: flex;
+  align-items: center;
+  flex-basis: 50%;
+}
+.product-right {
+  flex-basis: 50%;
+}
+
+.product-img img {
+  width: 300px;
+}

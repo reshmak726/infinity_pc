@@ -37,46 +37,36 @@
     </div>
   </section>
   <section class="home-cards mt-5">
-    <!-- ***************Overlay************* -->
-
-    <div id="overlay">
-      {% for i in ssd %}
-      <div class="overlay-flex">
-        <div class="overlay-content">
-          <div class="overlay-head">{{ i.name }}</div>
-          <div class="overlay-description">{{ i.des }}</div>
-          <div class="overlay-cart-amt">
-            <div class="overlay-amt">${{ i.price }}</div>
-            <div class="overlay-cart">Add to Cart</div>
-          </div>
-        </div>
-        <div class="overlay-img">
-          <img
-            src="{{ url_for('static', filename='images/storage/' +i.img) }}"
-          />
-        </div>
-        <i
-          class="close-overlay fa fa-times-circle"
-          style="font-size: 25px"
-          aria-hidden="true"
-          onclick="off()"
-        ></i>
-      </div>
-      {% endfor %}
-    </div>
-
-    <!-- ***************Overlay************* -->
-
     <div class="card-title my-4">SSD</div>
-    <div class="card-bg d-grid">
+    <div class="card-bg d-grid service-box">
       {% for i in ssd %}
       <div class="card" onclick="on()">
+        <!-- <input type="checkbox" name="open" id="open" /> -->
         <img
           class=" "
           src="{{ url_for('static', filename='images/storage/' +i.img) }}"
           alt=" "
         />
         {{i.name}}
+        <!-- ***************Overlay************* -->
+        <div class="overlay"></div>
+        <div class="service-desc d-flex flex-column align-items-center">
+          <h3>{{i.name}}</h3>
+          <p>${{i.price}}</p>
+          <!-- <hr /> -->
+          <div class="btn-div">
+            <button
+              class="button view-btn"
+              onclick="window.location='product/{{ i.id }}'"
+            >
+              <i class="fa fa-chevron-down" aria-hidden="true"></i> View More
+            </button>
+            <button class="button cart-btn">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart
+            </button>
+          </div>
+        </div>
+        <!-- ***************Overlay-end************* -->
       </div>
       {% endfor %}
     </div>
@@ -93,6 +83,25 @@
           alt=" "
         />
         {{i.name}}
+        <!-- ***************Overlay************* -->
+        <div class="overlay"></div>
+        <div class="service-desc d-flex flex-column align-items-center">
+          <h3>{{i.name}}</h3>
+          <p>${{i.price}}</p>
+          <!-- <hr /> -->
+          <div class="btn-div">
+            <button
+              class="button view-btn"
+              onclick="window.location='product/{{ i.id }}'"
+            >
+              <i class="fa fa-chevron-down" aria-hidden="true"></i> View More
+            </button>
+            <button class="button cart-btn">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart
+            </button>
+          </div>
+        </div>
+        <!-- ***************Overlay-end************* -->
       </div>
       {% endfor %}
     </div>
@@ -109,6 +118,25 @@
           alt=" "
         />
         {{i.name}}
+        <!-- ***************Overlay************* -->
+        <div class="overlay"></div>
+        <div class="service-desc d-flex flex-column align-items-center">
+          <h3>{{i.name}}</h3>
+          <p>${{i.price}}</p>
+          <!-- <hr /> -->
+          <div class="btn-div">
+            <button
+              class="button view-btn"
+              onclick="window.location='product/{{ i.id }}'"
+            >
+              <i class="fa fa-chevron-down" aria-hidden="true"></i> View More
+            </button>
+            <button class="button cart-btn">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart
+            </button>
+          </div>
+        </div>
+        <!-- ***************Overlay-end************* -->
       </div>
       {% endfor %}
     </div>
@@ -117,5 +145,4 @@
 </section>
 {% endblock content %} {% block js %}
 <script src="../static/JS/home.js "></script>
-<script src="../static/JS/storage.js "></script>
 {% endblock js %}

@@ -1,10 +1,15 @@
 {% extends 'layout.html' %}{% block css %}
-<link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/footer.css') }}" /> {% endblock css %} {% block footer %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename = 'CSS/footer.css') }}"
+/>
+{% endblock css %} {% block footer %}
 <section id="foot-section">
-    <div id="foot">
-        <div id="foot-left" class="m-5">
-            <div class="foot-link">
-                <a href="#"><i class="fa fa-whatsapp m-2">&nbsp;&nbsp;</i>https://whatsapp.com</a
+  <div id="foot">
+    <div id="foot-left" class="m-5">
+      <div class="foot-link">
+        <a href="#"
+          ><i class="fa fa-whatsapp m-2">&nbsp;&nbsp;</i>https://whatsapp.com</a
         >
       </div>
       <div class="foot-link">

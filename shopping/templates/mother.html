@@ -1,76 +1,80 @@
 {% extends 'layout.html' %} {% block css %}
-<link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/mother.css') }}" /> {% endblock css %} {% include 'nav.html' %}{% block content %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename = 'CSS/mother.css') }}"
+/>
+{% endblock css %} {% include 'nav.html' %}{% block content %}
 <section>
-    <section class="my-4">
-        <!-- slideshow overlay -->
+  <section class="my-4">
+    <!-- slideshow overlay -->
 
-        <div class="slideshow-container">
-            <div class="mySlides slide">
-                <img src="../static/images/motherboard/banner.png" />
-                <div class="text">Caption Text</div>
-            </div>
+    <div class="slideshow-container">
+      <div class="mySlides slide">
+        <img src="../static/images/motherboard/banner.png" />
+        <div class="text">Caption Text</div>
+      </div>
 
-            <div class="mySlides slide">
-                <img src="../static/images/main/main 1.png" />
-                <div class="text">Caption Two</div>
-            </div>
+      <div class="mySlides slide">
+        <img src="../static/images/main/main 1.png" />
+        <div class="text">Caption Two</div>
+      </div>
 
-            <div class="mySlides slide">
-                <img src="../static/images/main/main 2.png" />
-                <div class="text">Caption Three</div>
-            </div>
-            <div class="mySlides slide">
-                <img src="../static/images/main/main 3.png" />
-                <div class="text">Caption Three</div>
-            </div>
-        </div>
-        <!-- dots below overlay -->
-        <div style="text-align: center">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    </section>
-    <section class="home-cards mt-5">
-        <div class="card-title my-4">ATX</div>
-        <div class="card-bg d-grid">
-            <div class="card">
-                <img class="" src="../static/images/motherboard/card1-1.png" alt="" />
-            </div>
-            <div class="card">
-                <img src="../static/images/motherboard/card1-2.png" alt="" />
-            </div>
-            <div class="card">
-                <img src="../static/images/motherboard/card1-3.png" alt="" />
-            </div>
-            <div class="card">
-                <img src="../static/images/motherboard/card1-4.png" alt="" />
-            </div>
-        </div>
-    </section>
+      <div class="mySlides slide">
+        <img src="../static/images/main/main 2.png" />
+        <div class="text">Caption Three</div>
+      </div>
+      <div class="mySlides slide">
+        <img src="../static/images/main/main 3.png" />
+        <div class="text">Caption Three</div>
+      </div>
+    </div>
+    <!-- dots below overlay -->
+    <div style="text-align: center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+  <section class="home-cards mt-5">
+    <div class="card-title my-4">ATX</div>
+    <div class="card-bg d-grid">
+      <div class="card">
+        <img class="" src="../static/images/motherboard/card1-1.png" alt="" />
+      </div>
+      <div class="card">
+        <img src="../static/images/motherboard/card1-2.png" alt="" />
+      </div>
+      <div class="card">
+        <img src="../static/images/motherboard/card1-3.png" alt="" />
+      </div>
+      <div class="card">
+        <img src="../static/images/motherboard/card1-4.png" alt="" />
+      </div>
+    </div>
+  </section>
 
-    <section class="home-cards mt-5">
-        <div class="card-title my-4">EATX</div>
-        <div class="card-bg d-grid">
-            <div class="card">
-                <img class="" src="../static/images/motherboard/card2-1.png" alt="" />
-            </div>
-            <div class="card">
-                <img src="../static/images/motherboard/card2-2.png" alt="" />
-            </div>
-            <div class="card">
-                <img src="../static/images/motherboard/card2-3.png" alt="" />
-            </div>
-            <div class="card">
-                <img src="../static/images/motherboard/card2-4.png" alt="" />
-            </div>
-            <div class="card">
-                <img src="../static/images/motherboard/card2-5.png" alt="" />
-            </div>
-        </div>
-    </section>
-    {% include 'footer.html' %}
+  <section class="home-cards mt-5">
+    <div class="card-title my-4">EATX</div>
+    <div class="card-bg d-grid">
+      <div class="card">
+        <img class="" src="../static/images/motherboard/card2-1.png" alt="" />
+      </div>
+      <div class="card">
+        <img src="../static/images/motherboard/card2-2.png" alt="" />
+      </div>
+      <div class="card">
+        <img src="../static/images/motherboard/card2-3.png" alt="" />
+      </div>
+      <div class="card">
+        <img src="../static/images/motherboard/card2-4.png" alt="" />
+      </div>
+      <div class="card">
+        <img src="../static/images/motherboard/card2-5.png" alt="" />
+      </div>
+    </div>
+  </section>
+  {% include 'footer.html' %}
 </section>
 {% endblock content %} {% block js %}
 <script src="../static/JS/home.js"></script>
