@@ -1,0 +1,40 @@
+body {
+    background: url(../images/blue-abstract-waves-4k-3d-art-abstract-art-blue-wavy-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background: white;
+    height: 250px;
+    width: 600px;
+    align-self: center;
+    display: block;
+    width: 100%;
+    padding: 2em;
+}
+
+#login-page {
+    height: 100vh;
+    border: 1px solid white;
+}
+
+input {
+    display: block;
+    margin: auto auto;
+    width: 100%;
+    margin-bottom: 2em;
+    padding: .5em 0;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 1.25em;
+    color: #757575;
+}
+
+input:focus {
+    outline: none;
+}
